@@ -150,6 +150,5 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
   if (message?.type === 'LIGHTNING_CAPTURE') {
     sendResponse({ profile: collectFields() });
-    return true;
   }
 });
