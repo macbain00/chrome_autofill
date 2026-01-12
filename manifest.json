@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Lightning Autofill Lite",
+  "version": "1.1.0",
+  "description": "Capture fields on any page and autofill them later.",
+  "action": {
+    "default_title": "Lightning Autofill Lite",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
